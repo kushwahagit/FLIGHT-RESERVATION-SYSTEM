@@ -313,6 +313,7 @@ body .book .bookcontainer .bottom{
     border-radius: 0px 0px 20px 20px ;
     backdrop-filter: blur(10px);
     overflow-y:scroll;
+    padding-bottom: 25px;
 }
 
 
@@ -326,6 +327,12 @@ body .book .bookcontainer .bottom #results-section {
     margin: 0px 30px;
     border-radius: 6px;
     border: 1px solid #ccc;
+    display: flex;
+    transition: 0.2s;
+}
+
+.result-card:hover{
+    background: #0000007c;
 }
 
 .result-card h3 {
@@ -335,5 +342,53 @@ body .book .bookcontainer .bottom #results-section {
 }
 .result-card .carddetails{
     display: flex;
-    
+}
+
+.result-card .carddetails p{
+    font-size: 1.4rem;
+    margin-right: 50px;
+}
+
+.result-card .leftcard{
+    width: 80%;
+}
+
+.result-card .rightcard{
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.result-card .rightcard .bookbtn{
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 10px 40px;
+    color: white;
+    background-color: rgba(0, 183, 255, 0.334);
+    border: 2px solid white;
+    transition: 0.2s;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.result-card .rightcard .bookbtn:hover{
+    color: rgb(0, 183, 255);
+    border: 2px solid rgb(0, 183, 255);
+    transform: scale(1.05);
+    background-color: white;
+}
+
+::-webkit-scrollbar {
+    width: 12px; /* Width of the vertical scrollbar */
+    height: 12px; /* Height of the horizontal scrollbar */
+}
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.273); /* Light gray background */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #007bff; /* Blue color for the thumb */
+    border-radius: 0px; /* Optional: Rounded corners */
+    height: 10vh;
 }

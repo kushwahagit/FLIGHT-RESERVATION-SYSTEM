@@ -44,7 +44,7 @@ checkbtn.addEventListener('click',function(e){
 
 
         const timings = [
-            { start: '10:00 AM', duration: '2h 30m',Arrival : '12:30 PM' ,company: 'Kushwaha Airways' },
+            { start: '10:00 AM', duration: '2h 30m',Arrival : '12:30 PM' ,company: 'Air Asia' },
             { start: '12:00 PM', duration: '3h 00m',Arrival : '3:00 PM' ,company: 'Fly Emirates' },
             { start: '02:00 PM', duration: '2h 45m',Arrival : '4:45 PM' ,company: 'IndiGo' },
             { start: '05:00 PM', duration: '3h 15m',Arrival : '8:15 PM' ,company: 'Jet Airways' },
@@ -59,11 +59,16 @@ checkbtn.addEventListener('click',function(e){
             const flightCard = document.createElement('div');
             flightCard.classList.add('result-card');
             flightCard.innerHTML = `
-                <h3>${flight.company}</h3>
-                <div class = "carddetails">
-                    <p><strong>Departure:</strong> ${flight.start}</p>
-                    <p><strong>Landing:</strong> ${flight.Arrival}</p>
-                    <p><strong>Duration:</strong> ${flight.duration}</p>
+                <div class="leftcard">
+                    <h3>${flight.company}</h3>
+                    <div class = "carddetails">
+                        <p><strong>Departure:</strong> ${flight.start}</p>
+                        <p><strong>Landing:</strong> ${flight.Arrival}</p>
+                        <p><strong>Duration:</strong> ${flight.duration}</p>
+                    </div>
+                </div>
+                <div class = "rightcard">
+                    <button class="bookbtn">Book</button>
                 </div>
             `;
             resultsSection.appendChild(flightCard);
