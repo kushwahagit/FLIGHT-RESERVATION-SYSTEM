@@ -1,0 +1,339 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: "Poppins", serif;
+}
+
+body .Home nav{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: rgba(0, 0, 0, 0.137);
+    height: 8vh;
+    padding: 10px 100px 10px 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    backdrop-filter: blur(10px);
+    z-index: 999;
+}
+
+body .Home nav i{
+    border: 2px solid white;
+    padding: 10px;
+    border-radius: 15px;
+    transition: 0.2s;
+    text-transform: lowercase;
+    font-size: 1.2rem;
+}
+
+body .Home nav i:hover{
+    border: 2px solid rgb(78, 202, 251);
+    transform: scale(1.05);
+}
+
+body .Home nav img{
+    height: 6vh;
+    filter: drop-shadow(0px 0px 10px black);
+    margin-left: 100px ;
+    transition: 0.2s;
+}
+
+body .Home nav img:hover{
+    transform: scale(1.2);
+    filter: drop-shadow(0px 0px 15px black);
+}
+
+body .Home nav ul{
+    display: flex;
+    align-items: center;
+    margin-right: 100px;
+}
+
+body .Home nav ul li{
+    margin-left: 50px;
+    list-style: none;
+    transition: 0.2s;
+}
+
+body .Home nav ul li:hover{
+    transform: scale(1.1);
+}
+
+body .Home nav ul li a{
+    text-decoration: none;
+    color:white;
+    font-size: 1.3rem;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+body .Home nav ul li a:hover{
+    color: rgb(0, 183, 255);
+    text-shadow: -1px 0px 2px rgba(0, 0, 0, 0.513);
+}
+
+body .Home nav ul li button{
+    background-color: transparent;
+    font-size: 1.3rem;
+    border: 2px solid white;
+    color: white;
+    border-radius: 10px;
+    font-weight: 500;
+    padding: 8px 30px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+body .Home nav ul li button:hover{
+    color: rgb(0, 183, 255);
+    text-shadow: -1px 0px 2px rgba(0, 0, 0, 0.513);
+    border: 2px solid rgb(78, 202, 251);
+    transform: scale(1.05);
+}
+
+body .homesection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image:url(/IMAGES/loginhome.jpg) ;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+body .homesection .container{
+    width: 80%;
+    margin-left: 100px;
+    margin-top: 200px;
+    margin-bottom: 100px;
+    background-color: rgba(0, 0, 0, 0.209);
+    backdrop-filter: blur(10px);
+    border: 0px solid none;
+    border-radius: 25px;
+    padding: 30px;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.513);
+}
+
+body .homesection .container h1{
+    font-size: 2.5rem;
+    color: white;
+}
+
+body .homesection .container .cardcontainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+body .homesection .container .card{
+    background-color: rgba(0, 0, 0, 0.152);
+    backdrop-filter: blur(10px);
+    height: 50vh;
+    width: 35vh;
+    border: 0px solid none;
+    border-radius: 25px;
+    margin-bottom: 50px;
+    margin-top: 30px;
+    transition: 0.2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    margin: 30px 0px 50px 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.704);
+}
+
+body .homesection .container .card img{
+    height: 30vh;
+    border: 0px solid none;
+    border-radius: 15px;
+    margin: 0px 25px;
+}
+body .homesection .container .card h4{
+    align-self: left;
+    color: white;
+    margin: 10px 25px 0px 25px;
+    font-size: 1.2rem;
+}
+
+body .homesection .container .card .pricecart{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+
+body .homesection .container .card .pricecart button{
+    margin-right: 25px;
+    color: white;
+    background-color: transparent;
+    font-size: 1.3rem;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+body .homesection .container .card .pricecart button:hover{
+    color:rgb(0, 183, 255);
+    border-color: rgb(0, 183, 255);
+}
+
+body .homesection .container .card  p{
+    color: white;
+    /* width: 80%; */
+    margin: 10px 25px 0px 25px;
+}
+
+body .homesection .container .card:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.541);
+}
+
+
+body .book{
+    background: #1c92d2;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #f2fcfe, #1c92d2);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #1c92d2,#f2fcfe ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    box-shadow: 0px 0px 1000px rgba(0, 0, 0, 0.468) inset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body .book .bookcontainer{
+    background-color: rgba(0, 0, 0, 0.209);
+    width: 80%;
+    backdrop-filter: blur(10px);
+    border: 0px solid none;
+    border-radius: 25px;
+    padding: 40px;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.513);
+    margin-left: 100px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    color: white;
+}
+
+body .book .bookcontainer .top{
+    background-color: rgba(0, 0, 0, 0.501);
+    border: 0px solid transparent;
+    border-radius: 20px 20px 0px 0px ;
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+body .book .bookcontainer .top h3{
+    width: 100%;
+    font-size: 2.5rem;
+    justify-content: left;
+    margin: 50px 0px 50px 70px;
+}
+
+body .book .bookcontainer .top .input{
+    margin-bottom: 80px;
+}
+
+body .book .bookcontainer .top .input input{
+    font-size: 2rem;
+    padding: 15px 10px;
+    background-color: transparent;
+    outline: none;
+    border: 0px solid transparent;
+    border-bottom: 2px solid rgb(0, 183, 255);
+    color: white;
+}
+
+body .book .bookcontainer .top .input input::placeholder{
+    font-size: 1.2rem;
+}
+
+body .book .bookcontainer .top .input #rightarrow{
+    font-size: 2rem;
+    margin: 0px 50px;
+}
+
+body .book .bookcontainer .top .input button{
+    font-size: 1.5rem;
+    background-color: transparent;
+    color: white;
+    border: 0px solid transparent;
+    cursor: pointer;
+    transition: 0.2s;
+    padding: 17px 0px;
+    border-bottom: 2px solid rgb(0, 183, 255);
+}
+
+body .book .bookcontainer .top .input button:hover{
+    color: rgb(0, 183, 255);
+    transform: scale(1.1);
+    padding: 14.6px 0px ;
+}
+
+
+body .book .bookcontainer .top .checkbtn{
+    font-size: 2rem;
+    padding: 10px 30px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    border: 2px solid white;
+    background-color: transparent;
+    color: white;
+    transition: 0.2s;
+}
+
+body .book .bookcontainer .top .checkbtn:hover{
+    transform: scale(1.1);
+    color: rgb(0, 183, 255);
+    border: 2px solid rgb(0, 183, 255);
+}
+
+body .book .bookcontainer .top #error{
+    margin-bottom: 25px;
+    margin-top: 25px;
+    color: red;
+}
+
+body .book .bookcontainer .bottom{
+    height: 60vh;
+    background-color: rgba(0, 0, 0, 0.251);
+    border: 0px solid transparent;
+    border-radius: 0px 0px 20px 20px ;
+    backdrop-filter: blur(10px);
+    overflow-y:scroll;
+}
+
+
+body .book .bookcontainer .bottom #results-section {
+    margin-top: 20px;
+}
+ .result-card {
+    background: #0000003a;
+    backdrop-filter: blur(10px);
+    padding: 15px;
+    margin: 0px 30px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.result-card h3 {
+    margin: 0 0 10px;
+    color: rgb(0, 183, 255);
+    font-size: 2rem;
+}
+.result-card .carddetails{
+    display: flex;
+    
+}
