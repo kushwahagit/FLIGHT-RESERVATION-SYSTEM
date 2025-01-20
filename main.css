@@ -392,3 +392,167 @@ body .book .bookcontainer .bottom #results-section {
     border-radius: 0px; /* Optional: Rounded corners */
     height: 10vh;
 }
+
+
+body .email{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 30px;
+    box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.468) inset;
+    background-color: #3498db71;
+}
+
+body .email .left{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 50px;
+    color:#007bff;
+    text-shadow: -2px 0px 3px rgba(0, 0, 0, 0.645);
+    border-right: 2px solid rgba(0, 0, 0, 0.181);
+}
+
+body .email .left h3{
+    font-size: 3rem;
+    margin-left: 130px;
+}
+
+body .email .right{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: left;
+}
+
+body .email .right label{
+    font-size: 1.5rem;
+    width: 90%;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+body .email .right input{
+    font-size: 1.3rem;
+    padding: 10px 20px 10px 5px;
+    width: 87%;
+    outline: none;
+    overflow: scroll;
+    background-color: transparent;
+    border: 0px solid transparent;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.411);
+    margin-top: 60px;
+    margin-bottom: 10px;
+}
+
+body .email .right input::placeholder{
+    color: rgba(0, 0, 0, 0.205);
+}
+
+body .email .right .buttonholder{
+    width: 90%;
+    padding: 30px 0px 0px 0px ;
+}
+
+body .email .right .buttonholder .msgsbt{
+    font-size: 1.5rem;
+    padding: 10px 30px;
+    cursor: pointer;
+    border: 3px solid #007bff;
+    background-color: transparent;
+    color: #007bff;
+    transition: 0.2s;
+    font-weight: 700;
+    box-shadow: -2px 2px 2px rgba(0, 0, 0, 0.544);
+}
+
+body .email .right .buttonholder .msgsbt:hover{
+    background-color: #007bff;
+    color: white;
+    transform: scale(1.05);
+    box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.544);
+}
+
+body .help{
+    background: #2c3e50;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #3498db, #2c3e50);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #2c3e50 ,#3498db); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding: 80px 100px 50px 100px;
+    display: flex;
+}
+
+body .help .left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: left;
+    padding: 30px;
+    width: 50%;
+    border-right: 2px solid rgba(0, 0, 0, 0.225);
+}
+
+body .help .location{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: 100%;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+body .help .location i{
+    border: 0px solid transparent;
+    margin-right: 30px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.23);
+    padding: 15px;
+    font-size: 1.5rem;
+}
+
+body .help .location p{
+    font-size: 1rem;
+    color: rgba(0, 0, 0, 0.337);
+}
+
+body .help .right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: left;
+    padding: 30px;
+    width: 50%;
+    color: white;
+}
+
+body .help .right .top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 20px 0px;
+}
+
+body .help .right .top img{
+    height: 50px;
+    margin-right: 200px;
+}
+
+body .help .right .bottom {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+    margin-top: 50px;
+}
+
+body .help .right .bottom i{
+    margin-right: 20px;
+    font-size: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.376);
+    padding: 15px 20px;
+    border-radius: 50%;
+}
