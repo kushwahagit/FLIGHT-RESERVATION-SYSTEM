@@ -32,6 +32,7 @@ checkbtn.addEventListener('click',function(e){
     }
     else if(onboarding.value === '' || onboarding.value == null) {
         alert("Onboarding cannot be empty");
+    
         onboarding.focus();
     }
     else if (destination.value === '' || destination.value == null) {
@@ -105,10 +106,17 @@ checkbtn.addEventListener('click',function(e){
                     </div>
                 </div>
                 <div class = "rightcard">
-                    <button class="bookbtn">Book</button>
+                    <button class="bookbtn" id="bookbtn">Book</button>
                 </div>
             `;
             resultsSection.appendChild(flightCard);
+        });
+        const bookbtn = document.getElementById('bookbtn');
+        bookbtn.addEventListener('click', (event) => {
+            if (event.target.classList.contains('bookbtn')) {
+                // Redirect to booking.html
+                window.location.href = 'booking.html';
+            }
         });
     }
 })
@@ -150,3 +158,4 @@ msgsbt.addEventListener('click',function(){
         sendsucc.innerHTML = "Message sent successfully ✔";
     }
 })
+
