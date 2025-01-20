@@ -41,21 +41,51 @@ checkbtn.addEventListener('click',function(e){
     else{
         const resultsSection = document.getElementById('results-section');
         resultsSection.innerHTML = '';
-
-
-        const timings = [
-            { start: '10:00 AM', duration: '2h 30m',Arrival : '12:30 PM' ,company: 'Air Asia' },
-            { start: '12:00 PM', duration: '3h 00m',Arrival : '3:00 PM' ,company: 'Fly Emirates' },
-            { start: '02:00 PM', duration: '2h 45m',Arrival : '4:45 PM' ,company: 'IndiGo' },
-            { start: '05:00 PM', duration: '3h 15m',Arrival : '8:15 PM' ,company: 'Jet Airways' },
-            { start: '08:00 PM', duration: '2h 50m',Arrival : '10:50 PM' ,company: 'Vistara' },
-            { start: '08:00 PM', duration: '2h 50m',Arrival : '10:50 PM' ,company: 'Vistara' },
-            { start: '08:00 PM', duration: '2h 50m',Arrival : '10:50 PM' ,company: 'Vistara' },
-            { start: '08:00 PM', duration: '2h 50m',Arrival : '10:50 PM' ,company: 'Vistara' },
-            { start: '08:00 PM', duration: '2h 50m',Arrival : '10:50 PM' ,company: 'Vistara' },
+        
+        const timings = [ 
+            { company: 'Air Asia' }, 
+            { company: 'Fly Emirates' }, 
+            { company: 'IndiGo' }, 
+            { company: 'Jet Airways' },
+            { company: 'Vistara' },
+            { company: 'SpiceJet' },
+            { company: 'GoFirst' },
+            { company: 'Scoot' }, 
         ];
 
+        const generateRandomTime = () => { 
+            const hour = Math.floor(Math.random() * 12) + 1; 
+            const minute = Math.floor(Math.random() * 60); 
+            const ampm = Math.random() > 0.5 ? 'AM' : 'PM'; 
+            return `${hour.toString().padStart(2, '0')}:${minute.toString().padStart(2, '0')} ${ampm}`; 
+        };
+
+        const getTimeDifference = (start, duration) => { 
+            const [startHour, startMinute] = start.split(/[:\s]/); 
+            const [durationHours, durationMinutes] = duration.split(/h\s|m/).map(Number); 
+            const startTotalMinutes = (parseInt(startHour) % 12) * 60 + parseInt(startMinute) + (start.includes('PM') ? 720 : 0); 
+            const endTotalMinutes = startTotalMinutes + durationHours * 60 + durationMinutes; const endHour = Math.floor((endTotalMinutes % 1440) / 60); 
+            const endMinute = endTotalMinutes % 60; const endAmpm = endTotalMinutes >= 720 ? 'PM' : 'AM'; 
+            return `${(endHour % 12).toString().padStart(2, '0')}:${endMinute.toString().padStart(2, '0')} ${endAmpm}`; 
+        };
+
+
+
         timings.forEach((flight, index) => {
+            const start = generateRandomTime(); 
+            const durationHours = Math.floor(Math.random() * 4) + 1; 
+            const durationMinutes = Math.floor(Math.random() * 60); 
+            const duration = `${durationHours}h ${durationMinutes}m`; 
+            const end = getTimeDifference(start, duration); 
+            let price = Math.floor((Math.random() * 10000) + 2000);
+            let seat = Math.floor((Math.random() * 300) + 100);
+
+            flight.start = start; 
+            flight.duration = duration; 
+            flight.Arrival = end;
+            flight.price = price;
+            flight.seat = seat;
+
             const flightCard = document.createElement('div');
             flightCard.classList.add('result-card');
             flightCard.innerHTML = `
@@ -65,6 +95,13 @@ checkbtn.addEventListener('click',function(e){
                         <p><strong>Departure:</strong> ${flight.start}</p>
                         <p><strong>Landing:</strong> ${flight.Arrival}</p>
                         <p><strong>Duration:</strong> ${flight.duration}</p>
+                    </div>
+                </div>
+                <div class="centercard">
+                    <p><strong>Price<br></strong><span>₹ ${flight.price}.00</span></p>
+                    <div>
+                        <h4>Available</h4>
+                        <p>${flight.seat}/500</p>
                     </div>
                 </div>
                 <div class = "rightcard">
@@ -90,4 +127,26 @@ clearinputde.addEventListener('click',function(e){
     e.preventDefault();
     destination.value = '';
     destination.focus(); 
+})
+
+
+
+const msgsbt = document.getElementById('msgsbt');
+const emailright = document.getElementById('emailright');
+const sendsucc = document.getElementById('sendsucc');
+const comment = document.getElementById('comment');
+
+
+sendsucc.style.display="none";
+msgsbt.addEventListener('click',function(){
+
+    if (comment.value === '' || comment.value == null) {
+        alert("Message cant be empty");
+    }
+
+    else{
+        emailright.style.display="none";
+        sendsucc.style.display = "";
+        sendsucc.innerHTML = "Message sent successfully ✔";
+    }
 })
