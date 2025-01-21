@@ -1,5 +1,15 @@
 document.getElementById('bookingForm').addEventListener('submit', async function(e) {
     e.preventDefault();
+    const userDetails = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        passenger: document.getElementById("passengers").value,
+        class: document.getElementById("class").value,
+        date: document.getElementById("date").value,
+    };
+
+    // Store user details in localStorage
+    localStorage.setItem("userDetails", JSON.stringify(userDetails));
     
     const formData = new FormData(this);
     formData.append('selectedSeats', document.getElementById('selectedSeats').textContent);
@@ -34,7 +44,7 @@ let currentStep = 1;
 // Initialize seat map
 const seatGrid = document.getElementById('seatGrid');
 const seats = [];
-const seatPrice = 50; // Base price per seat
+const seatPrice = Math.floor((Math.random()*5000)+2000); // Base price per seat
 
 // Create seat grid
 function initializeSeats() {

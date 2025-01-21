@@ -40,6 +40,16 @@ checkbtn.addEventListener('click',function(e){
         destination.focus();
     }
     else{
+        const startLocation = document.getElementById("onboarding").value;
+        const endLocation = document.getElementById("destination").value;
+
+        const journeyDetails = {
+            startLocation: startLocation,
+            endLocation: endLocation,
+        };
+
+        localStorage.setItem("journeyDetails", JSON.stringify(journeyDetails));
+
         const resultsSection = document.getElementById('results-section');
         resultsSection.innerHTML = '';
         
@@ -85,6 +95,7 @@ checkbtn.addEventListener('click',function(e){
             flight.duration = duration; 
             flight.Arrival = end;
             flight.price = price;
+            localStorage.setItem("shareprice", "78999");
             flight.seat = seat;
 
             const flightCard = document.createElement('div');
